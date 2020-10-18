@@ -1,0 +1,30 @@
+/* font-family: 'Hind Madurai', sans-serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif; */
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 900;
+}
+p {
+	font-family: 'Hind Madurai', sans-serif;
+}
+
+.montserrat {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+.btn-lg {
+	font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+	.modal-xl {
+		width: 90%;
+		max-width: 1200px;
+	}
+}
