@@ -1,10 +1,2 @@
 if you have any suggestions for improvement, please let me know!
 
-remove logs,
-merge changes,
-remove repetitive copy paste assertions lol
-
-lagay sa labas let totalqty 
-
-look for cy.log
-look for //

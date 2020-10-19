@@ -55,4 +55,34 @@ var questions = {
     "The laws by which human conduct is judged are DETERMINED BY GOD.",
     "Reality ultimately exists in the INDIVIDUAL person.",
   ],
-} 
+}
+
+var view = {
+	displayList: function () {
+		var ul = document.querySelector("ul");
+		ul.innerHTML = "";
+
+		questions.list.forEach(function (question, index) {
+      var add_div = document.createElement("div");
+			add_div.textContent = question;
+			ul.appendChild(add_div);
+		},this);
+	},
+
+	createDeleteButton: function () {
+		var delBtn = document.createElement("button");
+		// delBtn.setAttribute("type", "button");
+		delBtn.textContent = "Delete";
+		delBtn.className = "DeleteBtn";
+		return delBtn;
+	},
+
+	setEventListeners: function () {
+    window.addEventListener("load", function () {
+      questions.logList();
+    });
+  },
+};
+
+view.setEventListeners();
+view.displayList();

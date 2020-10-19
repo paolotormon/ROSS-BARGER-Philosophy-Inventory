@@ -15,7 +15,11 @@ h2 {
 p {
 	font-family: 'Hind Madurai', sans-serif;
 }
-
+ul {
+	list-style-type: none; /* Remove bullets */
+	padding: 0; /* Remove padding */
+	margin: 0; /* Remove margins */
+}
 .montserrat {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
@@ -32,6 +36,6 @@ p {
 	}
 }
 
-.margin{
-  margin:5%;
+.margin {
+	margin: 5%;
 }
