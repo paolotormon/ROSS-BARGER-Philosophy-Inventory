@@ -80,7 +80,7 @@ var view = {
     }, this);
     var source = document.createElement("a");
     source.setAttribute("href", "https://www3.nd.edu/~rbarger/ross-barger");
-    source.textContent = "Taken from Ross Barger Philosophy Inventory";
+    source.textContent = "Questions from Ross Barger Philosophy Inventory";
     ul.appendChild(source);
   },
   setEventListeners: function () {
@@ -93,13 +93,31 @@ var view = {
 var results = {
   calculate: function () {
     var i = 0;
+    var philosophy = [0, 0, 0, 0];
     for (i = 0; i < questions.list.length; i++) {
-      debugger;
+
       var x = document.querySelector('input[name=q' + i + ']:checked').value;
       console.log(x);
+      // This search needs improvement
+      if (x == '0') {// 0 is agree
+        this.answers.forEach((element, position) => {
+          if (element.includes(i + 1)) {
+            console.log(element);
+            console.log(position);
+          }
+        });
+      }
     }
   },
-  answers: [],
+  answers:
+    [//idealism, realism, pragmatism, existentialism
+      [3, 6, 9, 14, 20, 24, 28, 30, 35, 39],
+      [2, 5, 7, 12, 17, 22, 31, 33, 34, 38],
+      [1, 4, 8, 10, 11, 19, 21, 27, 32, 36],
+      [13, 15, 16, 18, 23, 25, 26, 29, 37, 40],
+    ]
+
 }
 
-view.setEventListeners();
+// view.setEventListeners();
+// console.log(results.answers);
