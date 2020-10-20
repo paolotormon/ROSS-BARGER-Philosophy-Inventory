@@ -83,6 +83,15 @@ var view = {
     source.textContent = "Questions from Ross Barger Philosophy Inventory";
     ul.appendChild(source);
   },
+  displayResults: function (philosophy) {
+    if (Array.isArray(philosophy)) {
+      console.log("Is array");
+    } else {
+      console.log("Not array");
+    }
+    //Conclusion: philosophy is always an array
+
+  },
   setEventListeners: function () {
     window.addEventListener("load", function () {
       questions.logList();
@@ -116,6 +125,10 @@ var results = {
     const res = [];
     philosophy.forEach((item, index) => item === max ? res.push(index) : null);
     console.log("Your philosophy is " + res);
+    if (max != 0) {
+      view.displayResults(philosophy);
+    }
+
   },
   answers:
     [//idealism, realism, pragmatism, existentialism in order
