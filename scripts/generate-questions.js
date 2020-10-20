@@ -90,14 +90,29 @@ var view = {
       console.log("Not array");
     }
     //Conclusion: philosophy is always an array
-    
+
     let dispDiv = document.querySelector(".display-here");
     let resultDiv = document.createElement("div");
-    // dispDiv.innerHTML = "";
-    let resultText = "<h1>You are a nice person</h1>";
+    let resultText;
+    switch (philosophy[0]) {
+      case 0:
+        resultText = "<h1>You are an IDEALIST</h1>";
+        break;
+      case 1:
+        resultText = "<h1>You are a REALIST</h1>";
+        break;
+      case 2:
+        resultText = "<h1>You are a PRAGMATIST</h1>";
+        break;
+      case 3:
+        resultText = "<h1>You are an EXISTENTIALIST</h1>";
+        break;
+      default:
+        resultText  = "<h1>You broke the form. Try again :)</h1>";
+
+    }
     resultDiv.innerHTML = resultText;
     dispDiv.appendChild(resultDiv);
-
   },
   setEventListeners: function () {
     window.addEventListener("load", function () {
