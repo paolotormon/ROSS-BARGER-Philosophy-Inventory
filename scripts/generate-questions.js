@@ -62,7 +62,7 @@ var view = {
     ul.innerHTML = "";
 
     questions.list.forEach(function (question, index) {
-      var add_div = document.createElement("div");
+      let add_div = document.createElement("div");
       let name = "q" + index;
       let idA = "a" + index;
       let idB = "b" + index;
@@ -90,6 +90,12 @@ var view = {
       console.log("Not array");
     }
     //Conclusion: philosophy is always an array
+    let dispDiv = document.querySelector(".display-here");
+    let resultDiv = document.createElement("div");
+    // dispDiv.innerHTML = "";
+    let resultText = "<h1>You are a nice person</h1>";
+    resultDiv.innerHTML = resultText;
+    dispDiv.appendChild(resultDiv);
 
   },
   setEventListeners: function () {
