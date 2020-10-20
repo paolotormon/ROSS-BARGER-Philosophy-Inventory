@@ -92,8 +92,14 @@ var view = {
 
 var results = {
   calculate: function () {
-
-  }
+    var i = 0;
+    for (i = 0; i < questions.list.length; i++) {
+      debugger;
+      var x = document.querySelector('input[name=q' + i + ']:checked').value;
+      console.log(x);
+    }
+  },
+  answers: [],
 }
 
 view.setEventListeners();
