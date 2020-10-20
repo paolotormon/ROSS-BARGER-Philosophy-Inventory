@@ -63,37 +63,37 @@ var view = {
 
     questions.list.forEach(function (question, index) {
       var add_div = document.createElement("div");
-      let name = "q"+index;
-      let idA = "a"+index;
-      let idB= "b"+index;
+      let name = "q" + index;
+      let idA = "a" + index;
+      let idB = "b" + index;
       let radioAgree = "<div class='form-check form-check-inline'>"
-        + "<input class='form-check-input' type='radio' name='"+name+"' id='"+idA+"' value='0'>"
-        + "<label class='form-check-label' for='"+idA+"'>Agree</label>"
+        + "<input class='form-check-input' type='radio' name='" + name + "' id='" + idA + "' value='0'>"
+        + "<label class='form-check-label' for='" + idA + " required'>Agree</label>"
         + "</div>";
       let radioDisagree = "<div class='form-check form-check-inline'>"
-        + "<input class='form-check-input' type='radio' name='"+name+"' id='"+idB+"' value='1'>"
-        + "<label class='form-check-label' for='"+idB+"'>Disagree</label>"
+        + "<input class='form-check-input' type='radio' name='" + name + "' id='" + idB + "' value='1'>"
+        + "<label class='form-check-label' for='" + idB + " required'>Disagree</label>"
         + "</div>";
 
-      add_div.innerHTML = radioAgree + radioDisagree + "<p>" + question + "</p>";
+      add_div.innerHTML = radioAgree + radioDisagree + "<p>" + parseInt(index + 1, 10) + ". " + question + "</p>";
       ul.appendChild(add_div);
     }, this);
+    var source = document.createElement("a");
+    source.setAttribute("href", "https://www3.nd.edu/~rbarger/ross-barger");
+    source.textContent = "Taken from Ross Barger Philosophy Inventory";
+    ul.appendChild(source);
   },
-
-  createDeleteButton: function () {
-    var delBtn = document.createElement("button");
-    // delBtn.setAttribute("type", "button");
-    delBtn.textContent = "Delete";
-    delBtn.className = "DeleteBtn";
-    return delBtn;
-  },
-
   setEventListeners: function () {
     window.addEventListener("load", function () {
-      // questions.logList();
+      questions.logList();
     });
   },
 };
 
+var results = {
+  calculate: function () {
+
+  }
+}
+
 view.setEventListeners();
-// view.displayList();

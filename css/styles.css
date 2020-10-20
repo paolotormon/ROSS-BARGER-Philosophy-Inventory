@@ -35,6 +35,9 @@ ul {
 .margin {
 	margin: 0%;
 }
+/* .refer{
+	text-align:center;
+} */
 @media (min-width: 768px) {
 	.modal-xl {
 		width: 90%;
