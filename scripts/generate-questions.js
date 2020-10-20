@@ -10,8 +10,7 @@ var questions = {
     }
   },
   list: [
-    "Learning is a PROCESS OF INTERACTING with people and things around us.",
-    "It leads to new understandings which can then be used to solve social problems.",
+    "Learning is a PROCESS OF INTERACTING with people and things around us. It leads to new understandings which can then be used to solve social problems.",
     "The human person is PRIMARILY A NERVOUS SYSTEM which is influenced by interaction with the physical environment along lines recognized by science.",
     "Education should lead a person to SPIRITUAL understanding.",
     "Knowledge involves successful ADAPTATION to our surroundings.",
@@ -64,7 +63,8 @@ var view = {
 
     questions.list.forEach(function (question, index) {
       var add_div = document.createElement("div");
-
+      let name = index;
+      console.log(name);
       let radio="<div class='form-check form-check-inline'>"
       +"<input class='form-check-input' type='radio' name='inlineRadioOptions' id='inlineRadio1' value='0'>"
       +"<label class='form-check-label' for='inlineRadio1'>Agree</label>"
