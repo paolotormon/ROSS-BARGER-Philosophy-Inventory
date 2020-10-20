@@ -95,22 +95,30 @@ var results = {
     var i = 0;
     var philosophy = [0, 0, 0, 0];
     for (i = 0; i < questions.list.length; i++) {
-
-      var x = document.querySelector('input[name=q' + i + ']:checked').value;
-      console.log(x);
+      var ans = document.querySelector('input[name=q' + i + ']:checked');
+      if (ans == null)
+        ans = '1';
+      else
+        ans = document.querySelector('input[name=q' + i + ']:checked').value;
+      console.log(ans);
       // This search needs improvement
-      if (x == '0') {// 0 is agree
+      if (ans == '0') {// 0 is agree
         this.answers.forEach((element, position) => {
           if (element.includes(i + 1)) {
             console.log(element);
             console.log(position);
+            philosophy[position]++;
           }
         });
       }
     }
+    const max = Math.max(...philosophy);
+    const res = [];
+    philosophy.forEach((item, index) => item === max ? res.push(index) : null);
+    console.log("Your philosophy is " + res);
   },
   answers:
-    [//idealism, realism, pragmatism, existentialism
+    [//idealism, realism, pragmatism, existentialism in order
       [3, 6, 9, 14, 20, 24, 28, 30, 35, 39],
       [2, 5, 7, 12, 17, 22, 31, 33, 34, 38],
       [1, 4, 8, 10, 11, 19, 21, 27, 32, 36],
