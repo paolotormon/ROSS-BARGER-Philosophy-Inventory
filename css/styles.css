@@ -32,14 +32,15 @@ ul {
 .btn-lg {
 	font-size: 2rem;
 }
-
+.margin {
+	margin: 0%;
+}
 @media (min-width: 768px) {
 	.modal-xl {
 		width: 90%;
 		max-width: 1200px;
 	}
-}
-
-.margin {
-	margin: 5%;
+	.margin {
+		margin: 5%;
+	}
 }

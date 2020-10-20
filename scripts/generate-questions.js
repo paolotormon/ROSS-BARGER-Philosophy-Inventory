@@ -90,10 +90,10 @@ var view = {
 
   setEventListeners: function () {
     window.addEventListener("load", function () {
-      questions.logList();
+      // questions.logList();
     });
   },
 };
 
 view.setEventListeners();
-view.displayList();
+// view.displayList();
