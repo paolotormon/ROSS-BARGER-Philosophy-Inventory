@@ -58,26 +58,32 @@ var questions = {
 }
 
 var view = {
-	displayList: function () {
-		var ul = document.querySelector("ul");
-		ul.innerHTML = "";
+  displayList: function () {
+    var ul = document.querySelector("ul");
+    ul.innerHTML = "";
 
-		questions.list.forEach(function (question, index) {
+    questions.list.forEach(function (question, index) {
       var add_div = document.createElement("div");
-			add_div.textContent = question;
-			ul.appendChild(add_div);
-		},this);
-	},
 
-	createDeleteButton: function () {
-		var delBtn = document.createElement("button");
-		// delBtn.setAttribute("type", "button");
-		delBtn.textContent = "Delete";
-		delBtn.className = "DeleteBtn";
-		return delBtn;
-	},
+      let radio="<div class='form-check form-check-inline'>"
+      +"<input class='form-check-input' type='radio' name='inlineRadioOptions' id='inlineRadio1' value='0'>"
+      +"<label class='form-check-label' for='inlineRadio1'>Agree</label>"
+      +"</div>";
 
-	setEventListeners: function () {
+      add_div.innerHTML = "<p>" + question + "</p>";
+      ul.appendChild(add_div);
+    }, this);
+  },
+
+  createDeleteButton: function () {
+    var delBtn = document.createElement("button");
+    // delBtn.setAttribute("type", "button");
+    delBtn.textContent = "Delete";
+    delBtn.className = "DeleteBtn";
+    return delBtn;
+  },
+
+  setEventListeners: function () {
     window.addEventListener("load", function () {
       questions.logList();
     });
