@@ -83,8 +83,8 @@ var view = {
     source.textContent = "Questions from Ross Barger Philosophy Inventory";
     ul.appendChild(source);
   },
-  displayResults: function (philosophy) {
-    if (Array.isArray(philosophy)) {
+  displayResults: function (res,max) {
+    if (Array.isArray(res)) {
       console.log("Is array");
     } else {
       console.log("Not array");
@@ -92,26 +92,27 @@ var view = {
     //Conclusion: philosophy is always an array
 
     let dispDiv = document.querySelector(".display-here");
+    dispDiv.innerHTML="";
     let resultDiv = document.createElement("div");
-    let resultText;
-    switch (philosophy[0]) {
+    let philosophyText;
+    switch (res[0]) {
       case 0:
-        resultText = "<h1>You are an IDEALIST</h1>";
+        philosophyText = "<h1>You are an IDEALIST</h1>";
         break;
       case 1:
-        resultText = "<h1>You are a REALIST</h1>";
+        philosophyText = "<h1>You are a REALIST</h1>";
         break;
       case 2:
-        resultText = "<h1>You are a PRAGMATIST</h1>";
+        philosophyText = "<h1>You are a PRAGMATIST</h1>";
         break;
       case 3:
-        resultText = "<h1>You are an EXISTENTIALIST</h1>";
+        philosophyText = "<h1>You are an EXISTENTIALIST</h1>";
         break;
       default:
-        resultText  = "<h1>You broke the form. Try again :)</h1>";
-
+        philosophyText  = "<h1>You broke the form. Try again :)</h1>";
     }
-    resultDiv.innerHTML = resultText;
+    let scoreText ="<h3>You scored "+max+" on that </h3>";
+    resultDiv.innerHTML = philosophyText+scoreText;
     dispDiv.appendChild(resultDiv);
   },
   setEventListeners: function () {
@@ -147,8 +148,9 @@ var results = {
     const res = [];
     philosophy.forEach((item, index) => item === max ? res.push(index) : null);
     console.log("Your philosophy is " + res);
+    console.log(max);
     if (max != 0) {
-      view.displayResults(philosophy);
+      view.displayResults(res,max);
     }
 
   },
