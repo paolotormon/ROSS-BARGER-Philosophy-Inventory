@@ -90,6 +90,7 @@ var view = {
       console.log("Not array");
     }
     //Conclusion: philosophy is always an array
+    
     let dispDiv = document.querySelector(".display-here");
     let resultDiv = document.createElement("div");
     // dispDiv.innerHTML = "";

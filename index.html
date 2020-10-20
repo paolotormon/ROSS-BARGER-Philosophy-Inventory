@@ -23,9 +23,6 @@
     <h1>An Idealist?</h1>
     <h1>An Existentialist?</h1>
 
-    <script src="scripts/generate-questions.js"></script>
-    <br>
-    <div class="display-here">
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary btn-lg montserrat" data-toggle="modal"
       data-target="#exampleModalScrollable" onclick="view.displayList()">
@@ -51,14 +48,19 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
-            <button type="button" class="btn btn-primary" onclick="results.calculate()" data-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-primary" onclick="results.calculate()"
+              data-dismiss="modal">Submit</button>
           </div>
         </div>
       </div>
     </div>
+
     <div class="refer">
       <a href="https://github.com/paolotormon/ROSS-BARGER-Philosophy-Inventory">Source Code</a>
     </div>
+
+    <div class="display-here"></div>
+    <script src="scripts/generate-questions.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
