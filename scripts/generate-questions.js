@@ -63,14 +63,19 @@ var view = {
 
     questions.list.forEach(function (question, index) {
       var add_div = document.createElement("div");
-      let name = index;
-      console.log(name);
-      let radio="<div class='form-check form-check-inline'>"
-      +"<input class='form-check-input' type='radio' name='inlineRadioOptions' id='inlineRadio1' value='0'>"
-      +"<label class='form-check-label' for='inlineRadio1'>Agree</label>"
-      +"</div>";
+      let name = "q"+index;
+      let idA = "a"+index;
+      let idB= "b"+index;
+      let radioAgree = "<div class='form-check form-check-inline'>"
+        + "<input class='form-check-input' type='radio' name='"+name+"' id='"+idA+"' value='0'>"
+        + "<label class='form-check-label' for='"+idA+"'>Agree</label>"
+        + "</div>";
+      let radioDisagree = "<div class='form-check form-check-inline'>"
+        + "<input class='form-check-input' type='radio' name='"+name+"' id='"+idB+"' value='1'>"
+        + "<label class='form-check-label' for='"+idB+"'>Disagree</label>"
+        + "</div>";
 
-      add_div.innerHTML = "<p>" + question + "</p>";
+      add_div.innerHTML = radioAgree + radioDisagree + "<p>" + question + "</p>";
       ul.appendChild(add_div);
     }, this);
   },
