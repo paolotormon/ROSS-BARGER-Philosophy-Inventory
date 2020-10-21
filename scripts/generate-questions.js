@@ -76,16 +76,16 @@ var view = {
       let idB = "b" + index;
       let radioAgree = "<div class='form-check form-check-inline'>"
         + "<input class='form-check-input' type='radio' name='" + name + "' id='" + idA + "' value='0'>"
-        + "<label class='form-check-label' for='" + idA + " required'>Agree</label>"
+        + "<label class='form-check-label' for='" + idA + "' required>Agree</label>"
         + "</div>";
       let radioDisagree = "<div class='form-check form-check-inline'>"
         + "<input class='form-check-input' type='radio' name='" + name + "' id='" + idB + "' value='1'>"
-        + "<label class='form-check-label' for='" + idB + " required'>Disagree</label>"
+        + "<label class='form-check-label' for='" + idB + "' required>Disagree</label>"
         + "</div>";
 
       add_div.innerHTML = radioAgree + radioDisagree + "<p>" + parseInt(index + 1, 10) + ". " + question + "</p>";
       ul.appendChild(add_div);
-    }, this);  
+    }, this);
 
     var source = document.createElement("a");
     source.setAttribute("href", "https://www3.nd.edu/~rbarger/ross-barger");
@@ -125,9 +125,9 @@ var view = {
         philosophyText = "<h1>You broke the form. Try again :)</h1>";
     }
     // let scoreText ="<h3>You scored "+max+" on that </h3>";
-    let description = "<p class='text-white'>"+questions.philoDetails[res[0]]+"</p>"
-    +"<a href='http://instephshead.blogspot.com/2010/10/four-philosophies-idealism-realism.html'>Description Source</a>";
-    resultDiv.innerHTML = philosophyText +description;
+    let description = "<p class='text-white'>" + questions.philoDetails[res[0]] + "</p>"
+      + "<a href='http://instephshead.blogspot.com/2010/10/four-philosophies-idealism-realism.html'>Description Source</a>";
+    resultDiv.innerHTML = philosophyText + description;
     dispDiv.appendChild(resultDiv);
   },
   setEventListeners: function () {
