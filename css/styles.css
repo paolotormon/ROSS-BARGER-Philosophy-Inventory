@@ -3,6 +3,7 @@ font-family: 'Lora', serif;
 font-family: 'Montserrat', sans-serif; */
 body {
 	font-family: 'Montserrat', sans-serif;
+	background-color: #2d283E;
 }
 h1,
 h2,
@@ -25,6 +26,10 @@ ul {
 	padding: 0; /* Remove padding */
 	margin: 0; /* Remove margins */
 }
+
+.title{
+	margin-bottom: 10px;
+}
 .montserrat {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
@@ -37,18 +42,62 @@ ul {
 .btn-lg {
 	font-size: 2rem;
 }
-.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
-	background-color: #8064A2 !important;
+
+.head-1{
+	color: #9446ED;
+}
+.head-2{
+	color: #B990FF;
+}
+.head-3{
+	color: #DAC4FF;
 }
 
+.head-4{
+	color: #F2EBFE;
+}
+
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited {
+	background-color: #44056E !important;
+	border-color: #66229E;
+	color: #FFF;
+}
+.btn-primary:hover{
+	background-color: #FFF !important;
+	border-color: #FFF;
+	color: #000;
+}
+
+.open-form{
+	font-size: 3rem;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:visited {
+	background-color: #8064a2 !important;
+}
+
+.inline-block {
+	display: inline-block;
+}
 .card {
 	border-color: transparent;
+	background-color: #a081d9;
 }
 .call-to-action-card {
 	width: 100%;
 }
 .result-card {
 	width: 100%;
+}
+
+.share-link {
+	margin-top: 20px;
 }
 
 @media (min-width: 720px) {
@@ -102,6 +151,8 @@ ul {
 	margin-left: -75px;
 	opacity: 0;
 	transition: opacity 0.3s;
+	font-family: 'Lora', sans-serif;
+	font-weight: 400;
 }
 
 .tooltip2 .tooltiptext::after {
