@@ -54,6 +54,14 @@ var questions = {
     "The laws by which human conduct is judged are DETERMINED BY GOD.",
     "Reality ultimately exists in the INDIVIDUAL person.",
   ],
+  philoDetails: [
+    "Idealists stress the importance of learning ideas and concepts. They believe in reasoning but question the use of scientific method and sense perception. They have the most confidence in ideas that remain constant through time and place. When it comes to teaching students, idealists believe in sharing ideas and great works that are universal, as well as long-lived. They believe all students should have at least one teacher who they look up to, so they can learn cultural norms. In the classroom, idealists put a lot of focus on lecture, discussion and imitation.",
+
+    "Unlike idealists, realists highly recommend the use of scientific investigation and senses in order to learn. They put focus on the physical world, arguing that reality, knowledge and value exist independent of the mind. This physical world is composed of matter. Realists believe that schools should promote human rationality through observation and experimentation. A lot of responsibility is placed on the teacher to have the right background and information. Realist teachers believe in the importance of experimental learning. In order to learn, students have to take a hands-on approach.",
+
+    "Pragmatists place their focus on the idea of change. This constant change results in people having to understand what it means to know. Pragmatists believe that knowing represents an exchange between the leaner and the environment. They also believe that truth and values are always changing because the people who have those values change with the surrounding environment. For pragmatists, the most important thing for schools to teach is “how to question what we know and how to reconstruct what we know to match the changing world”. They put more focus on carefully solving problems and less on large amounts of information. They encourage problem solving through learner-centered problems such as student investigations and activities, providing technology and other resources, and encouraging students to collaborate with others.",
+
+    "Existentialists place their focus on the ideas of existence and essence. Individuals create their own meaning. Finding one’s purpose becomes a lifelong goal for existentialists. They believe in the importance of personal choice and reflection of knowledge. In school, they place importance on “developing a free, self-actualizing person”. This means having students discuss their lives and decisions they make. In the classroom, teachers place emphasis on asking questions and discovering one’s purpose in life. Students are given the chance to define themselves through how they live their lives."],
 }
 
 var view = {
@@ -83,7 +91,7 @@ var view = {
     source.textContent = "Questions from Ross Barger Philosophy Inventory";
     ul.appendChild(source);
   },
-  displayResults: function (res,max) {
+  displayResults: function (res, max) {
     if (Array.isArray(res)) {
       console.log("Is array");
     } else {
@@ -92,7 +100,7 @@ var view = {
     //Conclusion: philosophy is always an array
 
     let dispDiv = document.querySelector(".display-here");
-    dispDiv.innerHTML="";
+    dispDiv.innerHTML = "";
     let resultDiv = document.createElement("div");
     let philosophyText;
     switch (res[0]) {
@@ -109,10 +117,11 @@ var view = {
         philosophyText = "<h1>You are an EXISTENTIALIST!</h1>";
         break;
       default:
-        philosophyText  = "<h1>You broke the form. Try again :)</h1>";
+        philosophyText = "<h1>You broke the form. Try again :)</h1>";
     }
     // let scoreText ="<h3>You scored "+max+" on that </h3>";
-    resultDiv.innerHTML = philosophyText;
+    let description = "<p>"+questions.philoDetails[res[0]]+"</p>";
+    resultDiv.innerHTML = philosophyText +description;
     dispDiv.appendChild(resultDiv);
   },
   setEventListeners: function () {
@@ -150,7 +159,7 @@ var results = {
     console.log("Your philosophy is " + res);
     console.log(max);
     if (max != 0) {
-      view.displayResults(res,max);
+      view.displayResults(res, max);
     }
 
   },

@@ -30,21 +30,51 @@ ul {
 	font-weight: 700;
 }
 
+.padding {
+	padding: 0%;
+}
+
 .btn-lg {
 	font-size: 2rem;
 }
-.margin {
-	margin: 0%;
+
+.card {
+	border-color: transparent;
 }
-/* .refer{
-	text-align:center;
-} */
-@media (min-width: 768px) {
+.call-to-action-card {
+	width: 100%;
+}
+.result-card {
+	width: 100%;
+}
+
+@media (min-width: 720px) {
 	.modal-xl {
 		width: 90%;
 		max-width: 1200px;
 	}
-	.margin {
-		margin: 5%;
+	.padding {
+		padding: 5%;
+	}
+	.call-to-action-card {
+		width: 50%;
+	}
+	.result-card {
+		width: 50%;
+	}
+}
+@media (min-width: 1000px) {
+	.modal-xl {
+		width: 90%;
+		max-width: 1200px;
+	}
+	.padding {
+		padding: 5%;
+	}
+	.call-to-action-card {
+		width: 33%;
+	}
+	.result-card {
+		width: 66%;
 	}
 }
