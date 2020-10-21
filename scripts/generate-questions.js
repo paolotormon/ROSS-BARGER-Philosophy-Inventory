@@ -97,22 +97,22 @@ var view = {
     let philosophyText;
     switch (res[0]) {
       case 0:
-        philosophyText = "<h1>You are an IDEALIST</h1>";
+        philosophyText = "<h1>You are an IDEALIST!</h1>";
         break;
       case 1:
-        philosophyText = "<h1>You are a REALIST</h1>";
+        philosophyText = "<h1>You are a REALIST!</h1>";
         break;
       case 2:
-        philosophyText = "<h1>You are a PRAGMATIST</h1>";
+        philosophyText = "<h1>You are a PRAGMATIST!</h1>";
         break;
       case 3:
-        philosophyText = "<h1>You are an EXISTENTIALIST</h1>";
+        philosophyText = "<h1>You are an EXISTENTIALIST!</h1>";
         break;
       default:
         philosophyText  = "<h1>You broke the form. Try again :)</h1>";
     }
-    let scoreText ="<h3>You scored "+max+" on that </h3>";
-    resultDiv.innerHTML = philosophyText+scoreText;
+    // let scoreText ="<h3>You scored "+max+" on that </h3>";
+    resultDiv.innerHTML = philosophyText;
     dispDiv.appendChild(resultDiv);
   },
   setEventListeners: function () {
