@@ -85,11 +85,16 @@ var view = {
 
       add_div.innerHTML = radioAgree + radioDisagree + "<p>" + parseInt(index + 1, 10) + ". " + question + "</p>";
       ul.appendChild(add_div);
-    }, this);
+    }, this);  
+
     var source = document.createElement("a");
     source.setAttribute("href", "https://www3.nd.edu/~rbarger/ross-barger");
     source.textContent = "Taken from Ross Barger Philosophy Inventory";
     ul.appendChild(source);
+
+    var hint = document.createElement("h5");
+    hint.textContent = "ON MOBILE, please scroll down after submitting!";
+    ul.appendChild(hint);
   },
   displayResults: function (res, max) {
     if (Array.isArray(res)) {
