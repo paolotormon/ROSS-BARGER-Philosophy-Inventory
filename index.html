@@ -31,9 +31,24 @@
             data-target="#exampleModalScrollable" onclick="view.displayList()">
             FIND OUT NOW!
           </button>
+
           <div class="refer">
             <a href="https://github.com/paolotormon/ROSS-BARGER-Philosophy-Inventory">Source Code</a>
           </div>
+
+          <!-- The text field -->
+          <div>
+            <input type="text" value="Hello World" id="myInput">
+          </div>
+          <!-- The button used to copy the text -->
+          <div class="tooltip2">
+
+            <button type="button" class="btn btn-secondary montserrat" onclick="copy()" onmouseout="outFunc()">
+              <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+              Share with your friends!
+            </button>
+          </div>
+
         </div>
       </div>
       <div class="card result-card">
@@ -69,10 +84,7 @@
       </div>
     </div>
 
-    <a href="http://instephshead.blogspot.com/2010/10/four-philosophies-idealism-realism.html"></a>
-
-
-
+    <script src="scripts/copy.js"></script>
     <script src="scripts/generate-questions.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

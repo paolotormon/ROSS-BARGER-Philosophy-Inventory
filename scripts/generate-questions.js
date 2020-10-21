@@ -120,7 +120,8 @@ var view = {
         philosophyText = "<h1>You broke the form. Try again :)</h1>";
     }
     // let scoreText ="<h3>You scored "+max+" on that </h3>";
-    let description = "<p>"+questions.philoDetails[res[0]]+"</p>";
+    let description = "<p>"+questions.philoDetails[res[0]]+"</p>"
+    +"<a href='http://instephshead.blogspot.com/2010/10/four-philosophies-idealism-realism.html'>Description Source</a>";
     resultDiv.innerHTML = philosophyText +description;
     dispDiv.appendChild(resultDiv);
   },

@@ -37,6 +37,9 @@ ul {
 .btn-lg {
 	font-size: 2rem;
 }
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+	background-color: #8064A2 !important;
+}
 
 .card {
 	border-color: transparent;
@@ -77,4 +80,42 @@ ul {
 	.result-card {
 		width: 66%;
 	}
+}
+
+.tooltip2 {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip2 .tooltiptext {
+	visibility: hidden;
+	width: 140px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	left: 50%;
+	margin-left: -75px;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltip2 .tooltiptext::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+.tooltip2:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
 }
