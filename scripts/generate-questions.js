@@ -88,7 +88,7 @@ var view = {
     }, this);
     var source = document.createElement("a");
     source.setAttribute("href", "https://www3.nd.edu/~rbarger/ross-barger");
-    source.textContent = "Questions from Ross Barger Philosophy Inventory";
+    source.textContent = "Taken from Ross Barger Philosophy Inventory";
     ul.appendChild(source);
   },
   displayResults: function (res, max) {
@@ -120,7 +120,7 @@ var view = {
         philosophyText = "<h1>You broke the form. Try again :)</h1>";
     }
     // let scoreText ="<h3>You scored "+max+" on that </h3>";
-    let description = "<p>"+questions.philoDetails[res[0]]+"</p>"
+    let description = "<p class='text-white'>"+questions.philoDetails[res[0]]+"</p>"
     +"<a href='http://instephshead.blogspot.com/2010/10/four-philosophies-idealism-realism.html'>Description Source</a>";
     resultDiv.innerHTML = philosophyText +description;
     dispDiv.appendChild(resultDiv);
