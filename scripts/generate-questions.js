@@ -95,6 +95,7 @@ var view = {
     var hint = document.createElement("h5");
     hint.textContent = "ON MOBILE, please scroll down after submitting!";
     ul.appendChild(hint);
+
   },
   displayResults: function (res, max) {
     if (Array.isArray(res)) {
@@ -129,6 +130,7 @@ var view = {
       + "<a href='http://instephshead.blogspot.com/2010/10/four-philosophies-idealism-realism.html'>Description Source</a>";
     resultDiv.innerHTML = philosophyText + description;
     dispDiv.appendChild(resultDiv);
+    window.scrollTo(0,document.body.scrollHeight);
   },
   setEventListeners: function () {
     window.addEventListener("load", function () {
